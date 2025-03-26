@@ -1,4 +1,3 @@
-#!/usr/bin/env scheme-script
 (import (scheme base)
         (scheme write)
         (scheme read)
