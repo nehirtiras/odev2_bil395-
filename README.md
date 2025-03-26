@@ -1,153 +1,63 @@
 # odev2_bil395-
 
 ***
-# ADA Calculator
+## README - Multi-Language Calculator
 
-## Description
-This is a simple calculator implemented in Ada that supports basic arithmetic operations (+, -, *, /) and variable assignments. Users can input expressions, and the calculator will evaluate them accordingly. The program supports the following features:
+# Introduction
 
-- Addition, subtraction, multiplication, and division.
-- Variable assignments (e.g., `x = 5 + 3`).
-- Error handling for undefined variables and division by zero.
-- Interactive command-line interface.
+This project contains a simple calculator implemented in multiple programming languages, including Perl, Rust, Scheme, Prolog, and Ada. The calculator performs basic arithmetic operations such as addition, subtraction, multiplication, and division.
 
-## Requirements
-To compile and run this Ada program on **Ubuntu**, you need:
+# Requirements
 
-- GNAT (Ada compiler) installed on your system. If you don’t have GNAT, install it using:
-  
-  ```sh
-  sudo apt update
-  sudo apt install gnat
-  ```
+To run the code, you need to have the respective language compilers or interpreters installed on your system:
 
-## Compilation
-To compile the program, use the following command:
+Perl: Install Perl (sudo apt install perl or brew install perl). Perl is a high-level, general-purpose programming language known for its text-processing capabilities.
 
-```sh
- gnatmake Calculator.adb
-```
+Rust: Install Rust (curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh). Rust is a systems programming language focused on safety and performance.
 
-This will generate an executable named `calculator`.
+Scheme: Install a Scheme interpreter like MIT-Scheme (sudo apt install mit-scheme). Scheme is a minimalist dialect of Lisp, used for functional programming.
 
-## Running the Program
-After successful compilation, run the calculator using:
+Prolog: Install SWI-Prolog (sudo apt install swi-prolog). Prolog is a logic programming language commonly used in AI and symbolic reasoning.
 
-```sh
- ./calculator
-```
+Ada: Install GNAT (sudo apt install gnat). Ada is a statically typed language designed for safety-critical applications.
 
-## Usage Instructions
-- The calculator runs in an interactive mode.
-- Enter expressions like `5 + 3`, `10 / 2`, `x = 4 * 3`, etc.
-- Type `exit` to quit the program.
+# Implementation
 
-### Example Usage
-```
-ADA Calculator (type 'exit' to quit)
-Supports: + - * /, variables (x = 5 + 3)
+Each language's implementation follows a similar structure:
 
-> x = 10
-Result: 10.00
+Accept user input (numbers and operations)
 
-> y = x + 5
-Result: 15.00
+Perform the calculation
 
-> y / 3
-Result: 5.00
+Display the result
 
-> exit
-```
+Error handling for undefined variables and division by zero.
 
-## Notes
-- Ensure input expressions are correctly formatted.
-- Variables are case-sensitive.
-- Error messages will be displayed for invalid expressions.
+# How to Run
 
-***
+Perl
 
-Perl Calculator - README
-Overview
-This is a simple command-line calculator written in Perl that supports basic arithmetic operations and variable assignments. The calculator evaluates mathematical expressions following standard operator precedence and allows users to store values in variables for later use.
+perl calculator.pl
 
-Features
-Basic arithmetic operations: +, -, *, /
+Rust
 
-Parentheses for expression grouping
+cargo run --release
 
-Variable assignment and usage (e.g., x = 5 + 3)
+Scheme
 
-Error handling for invalid expressions and undefined variables
+Run the Scheme interpreter and load the file:
 
-Help command (help or ?)
+mit-scheme --load calculator.scm
 
-Exit command (exit or quit)
+Prolog
 
-Implementation Details
-Key Components:
-Variable Storage: Uses a hash (%variables) to store variable names and their values
+Start Prolog and load the calculator file:
 
-Expression Evaluation:
+swipl -s calculator.pl
 
-Handles parentheses by recursively evaluating nested expressions
+Ada
 
-Processes multiplication and division before addition and subtraction
+Compile and run:
 
-Validates input characters before evaluation
-
-Error Handling:
-
-Catches invalid characters, undefined variables, and division by zero
-
-Uses eval blocks to gracefully handle runtime errors
-
-Evaluation Process:
-Input sanitization (checks for invalid characters)
-
-Variable substitution (replaces variables with their stored values)
-
-Parentheses evaluation (innermost first)
-
-Multiplication and division (left to right)
-
-Addition and subtraction (left to right)
-
-How to Run
-Prerequisites
-Perl 5 installed on your system
-
-Running the Calculator
-Save the code to a file (e.g., calculator.pl)
-
-Make the file executable if desired: chmod +x calculator.pl
-
-Run the program: perl calculator.pl
-
-Usage Examples
-Copy
-> 5 + 3 * 2
-= 11
-
-> x = 10 / 2
-= 5
-
-> y = x + 3
-= 8
-
-> (x + y) * 2
-= 26
-
-> help
-***Perl Calculator***
-
-> exit
-Error Messages
-The calculator provides descriptive error messages for:
-
-Invalid characters in input
-
-Undefined variables
-
-Division by zero
-
-Syntax errors in expressions
+gnatmake calculator.adb
+./calculator
