@@ -1,4 +1,4 @@
-# odev2_bil395-
+# odev2_bil395- Nehir Tıraş 231101065
 
 ***
 ## README - Multi-Language Calculator
